@@ -1,0 +1,38 @@
+// Global stylesheet where import all other stylesheets
+// @import '../../../../node_modules/bootstrap/scss/bootstrap';
+
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+
+
+
+// Variable
+@import "./variables/variables";
+
+// Mixins
+@import "./mixins/mixins";
+
+// Fonts
+@import "./fonts/fonts";
+
+// Base
+@import "./base/base";
+
+// Themes
+@import "./themes/themes";
+
+// Shared
+@import "./shared/shared";
+
+// Pages
+@import "./pages/pages";
+
+// Layouts
+@import "./layouts/layouts";
+
+// Components
+@import "./components/components";
+
+// Utilities
+@import "./utilities/utilities";

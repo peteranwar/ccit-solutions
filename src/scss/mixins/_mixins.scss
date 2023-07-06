@@ -1,0 +1,135 @@
+@mixin ease {
+  transition: all 0.3s ease;
+}
+
+@mixin imageBackground($url) {
+  background-image: url(#{$url});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin customLine {
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  @include ease;
+
+  &:after {
+    content: "";
+    position: absolute;
+    @include ease;
+    background-color: currentColor;
+  }
+  &:after {
+    z-index: 5;
+    width: 40%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    // z-index: -1;
+    transform: scaleX(0);
+    transform-origin: bottom left;
+    [dir="rtl"] & {
+      transform-origin: right;
+    }
+  }
+
+  &:hover {
+    text-decoration: none;
+    color: $primary-color;
+    &::after {
+      transform: scaleX(1);
+      width: 100%;
+    }
+  }
+
+  &.active {
+    pointer-events: none;
+
+    &::after {
+      transform: scaleX(1);
+      transform-origin: right;
+    }
+    &::before {
+      transform: rotate(180deg) scaleY(1);
+      opacity: 1;
+    }
+  }
+}
+
+@mixin customBg {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    @include imageBackground("/assets/images/shape-bg.svg");
+    background-size: contain;
+    width: 90%;
+    height: 100%;
+    z-index: -1;
+    right: 0;
+    left: 0;
+    bottom: -7px;
+  }
+}
+
+@mixin customBgCircle {
+  line-height: 27.7px;
+  z-index: 5;
+  position: relative;
+  span {
+    @include customBg;
+    &::after {
+      background-image: url("/assets/images/shape-bg-circle.svg");
+      width: 100%;
+      height: 100%;
+      right: 0;
+      left: -14px;
+      bottom: 0;
+    }
+  }
+}
+
+@mixin overlay($bg-color) {
+  position: relative;
+  .content {
+    position: relative;
+    z-index: 2;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    background-color: $bg-color;
+  }
+}
+
+@mixin css3-prefix($prop, $value) {
+  -webkit-#{$prop}: #{$value};
+  -moz-#{$prop}: #{$value};
+  -ms-#{$prop}: #{$value};
+  -o-#{$prop}: #{$value};
+  #{$prop}: #{$value};
+}
+
+/* SCSS */
+// div {
+//     @include css3-prefix(transform, scale3d(2.5, 2, 1.5));
+//  }
+
+/* SCSS */
+@mixin vertical-center {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* SCSS */
+// div {
+//     @include vertical-center();
+//  }

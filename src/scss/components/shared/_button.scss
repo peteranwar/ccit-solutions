@@ -1,0 +1,117 @@
+.main-btn {
+    background-color: transparent;
+    min-height: 56px;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    z-index: 8;
+    font-weight: 600;
+    @include ease;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 8px;
+    line-height: 14px;
+    text-decoration: none;
+    border: 1px solid $primary-color;
+    text-transform: capitalize;
+
+    &[disabled] {
+        opacity: 0.3;
+        cursor: not-allowed;
+    }
+    svg {
+        @include ease;
+    }
+
+    @media screen and (max-width: 767px) {
+        min-height: 44px;
+        border-radius: 6px;
+        font-size: 14px;
+    }
+
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        width: 52%;
+        height: 100%;
+        background-color: $primary-color;
+        z-index: -1;
+        @include ease;
+    }
+    &::after {
+        inset: 0 0 0 auto;
+    }
+    &::before {
+        inset: 0 auto 0 0;
+    }
+
+    &:hover {
+        border: 1px solid $text-color;
+    }
+    &.primary-btn {
+        color: #010101;
+        border-color: $primary-color;
+
+        &:hover {
+            color: $primary-color;
+            border-color: #504c4c;
+            svg{
+                fill: $primary-color;
+            }
+
+            &:after {
+                transform: translateY(-101%) translateX(50px);
+                transform-origin: left;
+            }
+
+            &::before {
+                transform: translateY(101%) translateX(-50px);
+                transform-origin: right;
+            }
+        }
+        &.black {
+            color: #fff;
+            border-color: $text-color;
+
+            &:after,
+            &::before {
+                background-color: $text-color;
+            }
+
+            &:hover {
+                color: $text-color;
+            }
+        }
+    }
+
+    &.secondary-btn {
+        color: #fff !important;
+        border-color: #fff !important;
+        &:after {
+            transform: translateY(-100%) translateX(50px);
+            background-color: #fff;
+        }
+
+        &::before {
+            transform: translateY(100%) translateX(50px) scaleY(0);
+            background-color: #fff;
+        }
+        &:after {
+            transform: translateY(-100%) translateX(-50px) scaleY(0);
+            transform-origin: top;
+        }
+        &:hover {
+            color: $text-color !important;
+
+            &::before {
+                transform: translateY(0%) translateX(0) scaleY(1);
+            }
+            &:after {
+                transform: translateY(0%) translateX(0) scaleY(1);
+            }
+        }
+    }
+}

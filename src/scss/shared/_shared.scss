@@ -1,0 +1,155 @@
+// style
+.app {
+    background-color: #eee;
+    @media screen and (min-width: 410px) {
+        padding: 1rem 0 0;
+    }
+    .app-content {
+        margin: auto;
+        max-width: 410px;
+        background-color: white;
+        min-height: 100vh;
+        overflow: hidden;
+        @media screen and (min-width: 410px) {
+            border-radius: 24px;
+        }
+    }
+}
+
+/* style phone-number */
+a.phone-number {
+    direction: ltr;
+}
+
+
+a {
+    text-decoration: none !important;
+}
+
+// modal
+.modal-content {
+    width: 90%;
+    margin: auto;
+    max-height: 95vh;
+
+    .main-btn {
+        height: 49px;
+    }
+}
+.modal-dialog-centered {
+    height: 100vh;
+}
+
+
+//  back icon
+.back {
+    position: absolute;
+    top: 0rem;
+    left: 0;
+    cursor: pointer;
+    @include ease;
+    &:hover {
+        transform: translateX(-6px);
+        [dir="rtl"] & {
+            transform: translateX(6px) rotate(180deg);
+        }
+    }
+    [dir="rtl"] & {
+        transform: rotate(180deg);
+        left: auto;
+        right: 0;
+    }
+}
+
+// intl-tel-input
+.intl-tel-input {
+    width: 100%;
+    input {
+        width: 100%;
+    }
+    .country-list {
+        max-width: 100% !important;
+        margin: auto;
+        z-index: 99999999 !important;
+        font-size: 14px;
+    }
+}
+.intl-tel-input {
+    [dir="rtl"] & {
+        .flag-container .arrow {
+            margin-right: 5px;
+            margin-left: 0;
+        }
+    }
+}
+
+.intl-tel-input.allow-dropdown {
+    [dir="rtl"] & {
+        input[type="tel"] {
+            padding-right: 52px;
+            padding-left: 6px;
+        }
+    }
+}
+
+
+// /// input
+.main-input,
+.intl-tel-input input {
+    height: 44px !important;
+}
+
+//
+.form-check-inline {
+    margin: 0 1rem;
+}
+
+// close modal
+.close-modal {
+    top: -35px;
+    right: calc(50% - 12px);
+    position: absolute;
+    @include ease;
+    svg path {
+        stroke: white;
+        @include ease;
+    }
+    &:hover {
+        transform: scale(1.2) rotate(90deg);
+        cursor: pointer;
+        svg path {
+            stroke: #ff2e2e;
+        }
+    }
+}
+
+//
+.modal-menu span > img {
+    filter: none !important;
+}
+
+// .intl-tel-input .country-list
+.intl-tel-input .country-list {
+    [dir="rtl"] & {
+        text-align: right !important;
+    }
+}
+
+
+// NEW
+.main-header{
+    .title{
+       font-size: 2.2rem;
+    }
+    .subtitle{
+        font-size: 18px;
+    }
+    @media screen and (max-width: 767px) {
+        .title{
+            font-size: 1.2rem;
+         }
+         .subtitle{
+             font-size: 12px;
+         }
+    }
+}
