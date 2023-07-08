@@ -1,0 +1,67 @@
+.our-works_page {
+    .main-hero {
+        min-height: 55vh;
+    }
+
+    // Project Card
+    .project-card {
+        border: 2px solid #e6ddfe;
+        border-radius: 22px;
+        @include ease;
+
+        .project-cardContent {
+            padding-inline-start: 3rem;
+            .project-title {
+                font-size: 1.75rem;
+              @include ease;
+            }
+
+            .project-text {
+                font-size: 1.1rem;
+            }
+        }
+        .project-img {
+            height: 100%;
+            width: 100%;
+            border-radius: 22px;
+            object-fit: cover;
+            @include ease;
+        }
+        &:hover{
+            transform: translateY(2px);
+            .project-img{
+                filter: grayscale(1);
+            }
+            .project-title{
+                color: $primary-color;
+            }
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        .main-hero {
+            min-height: 40vh;
+        }
+
+        // Project Card
+        .project-card {
+            border-width: 1px;
+            border-radius: 16px;
+
+            .project-cardContent {
+                padding-inline-start: 0rem;
+                .project-title {
+                    font-size: 0.85rem;
+                }
+
+                .project-text {
+                    font-size: 11px;
+                }
+            }
+            .project-img {
+                border-radius: 16px;
+                height: 200px;
+            }
+        }
+    }
+}

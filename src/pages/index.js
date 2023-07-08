@@ -121,14 +121,13 @@ const index = () => {
                             </div>
 
                             <div className="col-12 d-flex justify-content-end py-3 mt-5 mt-md-1">
-                                <Link href="/" className='fw-bold cl-primary fs-5 fs-responsive'>
+                                <Link href="/" className='view-more fw-bold cl-primary fs-5 fs-responsive'>
                                     View More
                                 </Link>
                             </div>
                         </div>
                     </div>
                 </div>
-
 
                 {/* about */}
                 <div className="about py-3 py-md-4">

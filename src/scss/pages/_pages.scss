@@ -1,4 +1,43 @@
-// Pages 
+// Pages
 
-@import "./home"; 
+@import "./home";
+@import "./about";
+@import "./our-works";
+@import "./contact-us";
 
+.main-hero {
+    background-color: #010101;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url("../../../public/assets/images/hero-bg.png");
+        background-position: center;
+        background-size: cover;
+        inset: 0 0 0 auto;
+        width: 100%;
+        height: 100%;
+    }
+    .main-hero_content {
+        position: relative;
+        z-index: 5;
+        .subtitle {
+            font-size: 18px;
+        }
+        .title{
+            font-size: 2rem;
+            line-height: 50px;
+        }
+
+        @media screen and (max-width: 991px) {
+            .subtitle {
+                font-size: 12px;
+            }
+            .title{
+                font-size: 1rem;
+                line-height: 22px;
+            }
+    
+        }
+    }
+}

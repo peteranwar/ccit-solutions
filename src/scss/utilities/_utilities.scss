@@ -25,6 +25,10 @@
 .cl-light{
     color: $text-light;
 }
+
+.cl-text{
+    color: $text-color;
+}
 @media screen and (max-width: 767px) {
     .fs-5.fs-responsive {
         font-size: 1rem !important;

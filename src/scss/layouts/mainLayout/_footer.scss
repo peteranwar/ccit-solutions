@@ -127,6 +127,10 @@ footer {
             background-color: transparent;
             border: none;
         }
+
+        .accordion-button:not(.collapsed) {
+            color: $text-color !important;
+        }
         .accordion-item {
             padding: 0.75rem 0;
             position: relative;

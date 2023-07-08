@@ -1,0 +1,43 @@
+.contact-us_page{
+    .contact-us_links{
+        border-bottom: 1px solid #8d939ab2;
+    }
+    .contact-us_link{
+        .icon{
+            margin-inline-end: .75rem;
+            width: 52px;
+            height: 52px;
+            background-color: $text-color;
+            @include ease;
+        }
+        .link{
+            flex: 1;
+            a{
+                @include ease;
+                &:hover {
+                    color: $primary-color;
+                    text-decoration: line-through !important;
+                }
+            }
+        }
+        &:hover{
+            .icon{
+                background-color: $primary-color;
+                transform: rotate(8deg) translateY(-4px);
+            }
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        .contact-us_link{
+            .icon{
+                width: 34px;
+                height: 34px;
+                svg{
+                    width: 16px;
+                }
+            }
+        }
+    
+    }
+}

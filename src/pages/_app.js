@@ -35,8 +35,8 @@ export default function MyApp(props) {
         <meta name='viewport' content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' />
         <meta name="description" content="" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
+        <link rel="icon" href="/assets/images/ccit-fav.png" />
       </Head>
-      {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
 
        {/* <QueryClientProvider client={queryClient}>
         <ReactQueryDevtools initialIsOpen={false} />

@@ -25,7 +25,7 @@
         @include ease;
     }
 
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 991px) {
         min-height: 44px;
         border-radius: 6px;
         font-size: 14px;
@@ -57,7 +57,7 @@
 
         &:hover {
             color: $primary-color;
-            border-color: #504c4c;
+            border-color: #a5a3a8;
             svg{
                 fill: $primary-color;
             }
@@ -88,7 +88,7 @@
     }
 
     &.secondary-btn {
-        color: #fff !important;
+        color: #fff;
         border-color: #fff !important;
         &:after {
             transform: translateY(-100%) translateX(50px);
@@ -112,6 +112,15 @@
             &:after {
                 transform: translateY(0%) translateX(0) scaleY(1);
             }
+        }
+
+        &.secondary-2{
+            color:$primary-color;
+            border-color:$primary-color !important;
+            &::after, &::before{
+                background-color: $primary-color !important;
+            }
+            
         }
     }
 }

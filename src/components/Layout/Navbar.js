@@ -5,11 +5,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const Navbar = () => {
-
     const router = useRouter();
     const [colorChange, setColorchange] = useState(false);
     const [openNav, setOpenNav] = useState(false);
     const [showToTopBtn, setShowToTopBtn] = useState(false);
+
+    const inContactUsPage = router.pathname == "/contact-us";
+
+    const darkNav = router.pathname.includes("/contact-us");
+
 
     const changeNavbarColorAndToggleToTopBtn = () => {
         if (window.scrollY >= 60) {
@@ -35,9 +39,10 @@ const Navbar = () => {
 
     const headerClasses = () => {
         return (
-            `navContainer ${colorChange ? 'navScroll' : ''}`
+            `navContainer ${colorChange ? 'navScroll' : ''} ${darkNav ? 'dark-nav' : ''}`
         )
     }
+
 
     return (
         <nav className={headerClasses()}>
@@ -53,6 +58,11 @@ const Navbar = () => {
                 </Link>
             </div>
 
+            {!inContactUsPage && (<div className="contact-us_mob">
+                <MainButton isLink linkTo="/contact-us" restClasses="px-3 d-flex d-lg-none" primary>
+                    CONTACT US
+                </MainButton>
+            </div>)}
             <div className='navContent'>
                 <div className={`linksContainer d-flex align-items-center ${openNav ? "open-nav" : ''}`}>
                     <div className="container">
@@ -89,7 +99,7 @@ const Navbar = () => {
                                     </li>
                                     <li>
                                         <a href="https://ccit-blog.sa" target='_blank' className="navLink ">
-                                              Blog
+                                            Blog
                                         </a>
                                     </li>
                                     <li>
@@ -100,11 +110,17 @@ const Navbar = () => {
                                 </ul>
                             </div>
                             <div className="col-lg-2 d-flex justify-content-center justify-content-lg-end mt-4 mt-lg-0">
-                                    <MainButton isLink linkTo="/contact-us" restClasses="px-3" primary>
-                                        CONTACT US
-                                    </MainButton>
+                                {!inContactUsPage && (<MainButton isLink linkTo="/contact-us" restClasses="px-3 d-none d-lg-flex" primary>
+                                    CONTACT US
+                                </MainButton>)}
+
+
+                                <MainButton isLink linkTo="/" restClasses="px-5 mt-4 d-flex d-lg-none" primary>
+                                    Request a proposal
+                                </MainButton>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
