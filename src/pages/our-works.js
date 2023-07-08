@@ -31,7 +31,6 @@ const OurWorks = () => {
                     </div>
                 </div>
 
-
                 {/* Projects */}
                 <div className="our-works_container py-4">
                     <div className="container">

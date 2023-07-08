@@ -1,0 +1,106 @@
+.careers-page {
+    .main-hero {
+        min-height: 60vh;
+    }
+
+    // careers-main
+    .careers-mainContent {
+        border-bottom: 1px solid #8d939ab2;
+
+        .nav-item {
+            margin-inline-end: 1rem;
+            .nav-link {
+                border: 2px solid #bfc4c8;
+                border-radius: 16px;
+                font-size: 18px;
+                @include ease;
+                &:hover {
+                    border-color: $text-color;
+                }
+                &.active {
+                    background-color: $text-color;
+                    color: white;
+                    border-color: $text-color;
+                }
+            }
+        }
+    }
+
+    // job-card
+    .job-card {
+        border: 2px solid rgba(230, 221, 254, 0.6);
+        border-radius: 20px;
+        @include ease;
+        .job-title {
+            font-size: 1.5rem;
+            margin-inline-end: 0.7rem;
+        }
+
+        .main-btn {
+            .icon,
+            svg path {
+                @include ease;
+            }
+            &:hover {
+                .icon {
+                    transform: translate(10px, -5px);
+                    svg path {
+                        fill: $primary-color;
+                    }
+                }
+            }
+        }
+        &:hover {
+            border-color: lighten($primary-color, 5);
+        }
+    }
+    .status {
+        background-color: rgba(67, 195, 163, 0.16);
+        border-radius: 30px;
+        font-size: 15px;
+    }
+    .job-desc,
+    .job-type {
+        font-size: 18px;
+    }
+    @media screen and (max-width: 991px) {
+        // careers-main
+        .careers-main {
+            .nav-item {
+                margin-inline-end: 0.75rem;
+                .nav-link {
+                    border-radius: 10px;
+                    font-size: 12px;
+                }
+            }
+        }
+        .status {
+            border-radius: 30px;
+            font-size: 10px;
+        }
+        .job-desc,
+        .job-type {
+            font-size: 12px;
+        }
+        .job-type {
+            svg {
+                width: 16px;
+                height: 16px;
+            }
+        }
+        // job-card
+        .job-card {
+            border-radius: 16px;
+            .job-title {
+                font-size: 0.8rem;
+                margin-inline-end: 0.5rem;
+            }
+
+            .main-btn .icon {
+                svg {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}

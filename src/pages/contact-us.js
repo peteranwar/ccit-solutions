@@ -2,15 +2,15 @@ import React, { useState } from 'react'
 
 import IntlTelInput from 'react-intl-tel-input'
 
-import Layout from '@/components/Layout'
 import { Form } from 'react-bootstrap';
+import Layout from '@/components/Layout'
 import MainButton from '@/components/shared/MainButton';
+
 const ContactUs = () => {
 
     const [formValues, setFormValues] = useState({
         name: '',
         phone: '',
-
     });
 
     const [isValidPhoneNum, setIsValidPhoneNum] = useState(false)

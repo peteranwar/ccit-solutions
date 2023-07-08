@@ -66,6 +66,7 @@
         @include ease;
         align-items: center;
         transform: translateX(-100%) translateY(-100%);
+
         &.open-nav {
             transform: translateY(0%);
             ul.links li {
@@ -91,7 +92,6 @@
     img {
         width: 120px;
     }
-
     @media (max-width: 991px) {
         position: fixed;
         left: 4.5rem;

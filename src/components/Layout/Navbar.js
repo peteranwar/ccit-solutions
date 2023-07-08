@@ -12,8 +12,7 @@ const Navbar = () => {
 
     const inContactUsPage = router.pathname == "/contact-us";
 
-    const darkNav = router.pathname.includes("/contact-us");
-
+    const darkNav = ["/contact-us", "/careers/job/[id]"].includes(router.pathname);
 
     const changeNavbarColorAndToggleToTopBtn = () => {
         if (window.scrollY >= 60) {
@@ -88,8 +87,8 @@ const Navbar = () => {
                                         </Link>
                                     </li>
                                     <li>
-                                        <Link href='/services' className={`navLink ${router.pathname == "/services" ? "active" : ""}`}>
-                                            Services
+                                        <Link href='/careers' className={`navLink ${router.pathname == "/careers" ? "active" : ""}`}>
+                                            Careers
                                         </Link>
                                     </li>
                                     <li>

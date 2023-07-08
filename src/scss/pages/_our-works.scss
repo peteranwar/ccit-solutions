@@ -29,6 +29,7 @@
         }
         &:hover{
             transform: translateY(2px);
+            border-color: $primary-color;
             .project-img{
                 filter: grayscale(1);
             }
