@@ -2,7 +2,7 @@ import axios from "axios";
 
 // const BASE_URL = process.env.REACT_APP_BASE_URL; 
 // const BASE_URL = 'https://cs.ccit.sa/api/'
-const BASE_URL = 'https://api.ccit.sa/api/'
+const BASE_URL = 'https://sys.ccit.sa/api/'
 
 
 
