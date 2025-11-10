@@ -3,9 +3,13 @@
 @import "./home";
 @import "./about";
 @import "./our-works";
+@import "./blog";
+@import "./details";
 @import "./contact-us";
 @import "./careers";
 @import "./apply-job";
+@import "./privacy";
+@import "../variables/color";
 
 .main-hero {
     background-color: #010101;
@@ -13,7 +17,7 @@
     &::before {
         content: "";
         position: absolute;
-        background-image: url("../../../public/assets/images/hero-bg.png");
+        background-image: url("/assets/images/hero-bg-min.png");
         background-position: center;
         background-size: cover;
         inset: 0 0 0 auto;
@@ -27,8 +31,9 @@
             font-size: 18px;
         }
         .title{
-            font-size: 2rem;
-            line-height: 50px;
+            font-size: 1.7rem;
+            line-height: 44px;
+            min-height: 50px;
         }
 
         .text {
@@ -36,6 +41,7 @@
         }
 
         @media screen and (max-width: 991px) {
+            text-align: center;
             .subtitle {
                 font-size: 12px;
             }
@@ -47,6 +53,170 @@
                 font-size: 12px;
             }
     
+        }
+    }
+}
+
+
+//cart item
+.carts {
+    .cart-item {
+        .img {
+            height: 25rem;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        .details {
+            span {
+                font-size: 16px;
+                color: $gray-color;
+            }
+
+            .title {
+                h3 {
+                    font-size: 19px;
+                    line-height: 36px;
+                    letter-spacing: 0em;
+                    color: $text-color;
+                    -webkit-line-clamp: 2;
+                }
+
+                img {
+                        [dir="rtl"] & {
+                            transform: rotate(262deg);
+                        }
+                }
+            }
+            .title h3 , .blog-desc{
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                overflow: hidden;
+            }
+            .blog-desc {
+                font-size: 16px;
+                line-height: 24px;
+                color: $text-light;
+               
+                -webkit-line-clamp: 3;
+            }
+
+        }
+    }
+}
+.two-btn {
+    gap: 1rem;
+    button {
+        width: 130px;
+        height: 39px;
+        border-radius: 27px;
+        border: 2px solid $text-color;
+        font-size: 16px;
+        background-color: transparent;
+        transition: $transition;
+
+        &:hover {
+            transition: $transition;
+            background-color:$primary-color ;
+            color: #ffffff;
+            transform: translateY(-5px);
+            border: none;
+        }
+    }
+}
+
+// =====================  breakpoint (lg) =================
+@media screen and (max-width: 991px) {
+    // cart item
+    .carts {
+        .cart-item {
+            .img {
+                height: 20rem;
+            }
+            .details {
+                span {
+                    font-size: 12px;
+                }
+
+                .title {
+                    h3 {
+                        font-size: 15px;
+                        line-height: 21px;
+                        letter-spacing: -2%;
+                    }
+
+                    span {
+                        line-height: 21px;
+
+                        i {
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                p {
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: -2%;
+                }
+
+            }
+        }
+    }
+    .two-btn {
+        button {
+            width: 85px;
+            height: 26px;
+            border-radius: 27px;
+            font-size: 16px;
+        }
+    }
+}
+
+// =====================  breakpoint (sm) =================
+@media screen and (max-width: 576px) {
+    // cart item
+    .carts {
+        .cart-item {
+            .img {
+                height: 17rem;
+            }
+
+            .details {
+                span {
+                    font-size: 10px;
+                }
+
+                .title {
+                    h3 {
+                        font-size: 13px;
+                        line-height: 21px;
+                        letter-spacing: -2%;
+                    }
+
+                    span {
+                        line-height: 21px;
+                        font-size: 16px;
+                    }
+                }
+
+                p {
+                    font-size: 10px;
+                    line-height: 16px;
+                    letter-spacing: -2%;
+                }
+            }
+        }
+    }
+    
+    .two-btn {
+        button {
+            width: 60px;
+            height: 26px;
+            border-radius: 27px;
+            font-size: 10px;
         }
     }
 }

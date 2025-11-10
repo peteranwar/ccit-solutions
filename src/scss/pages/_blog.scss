@@ -1,0 +1,18 @@
+.blog-page {
+    .main-hero {
+        min-height: 40vh;
+        [dir="rtl"] & {
+            @media (min-width: 992px) {
+                .row {
+                    text-align: right !important;
+                }
+            }
+        }
+    }
+
+    .active-btn {
+        background-color: $text-color;
+        color: #fff;
+        border: transparent;
+    }
+}

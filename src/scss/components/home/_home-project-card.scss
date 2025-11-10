@@ -1,0 +1,36 @@
+.home-project-card {
+    .project-image {
+        height: 450px;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+        border:5px solid #1A2D29;
+        .view-btn {
+            position: absolute;
+            top: 1rem;
+            inset-inline-end: 1rem;
+            background-color: hsla(167, 27%, 14%, 0.5);
+            color: $primary-color;
+            @include ease;
+            svg, path {
+                color: $primary-color;
+            };
+            &:hover {
+                background-color: hsla(167, 27%, 14%, 0.8);
+            }
+        }
+    }
+
+    .project-desc{
+        color: #B9B9B9;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+    @media screen and (max-width: 768px) {
+        .project-image {
+            height: 250px;
+        }
+    }
+}

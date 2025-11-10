@@ -16,18 +16,19 @@
                 @include ease;
                 &:hover {
                     color: $primary-color;
-                    text-decoration: line-through !important;
                 }
             }
         }
         &:hover{
             .icon{
                 background-color: $primary-color;
-                transform: rotate(8deg) translateY(-4px);
             }
         }
     }
 
+    .feedback-msg{
+        background-color: $primary-color;
+    }
     @media screen and (max-width: 991px) {
         .contact-us_link{
             .icon{

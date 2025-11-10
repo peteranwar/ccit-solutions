@@ -1,10 +1,18 @@
-.careers-page {
+.careers-page,.websites {
     .main-hero {
-        min-height: 60vh;
+        min-height: 43vh;
+        [dir="rtl"] & {
+            @media (min-width: 992px) {
+                .row{
+                    text-align: right !important;
+                }
+
+            }
+        }
     }
 
     // careers-main
-    .careers-mainContent {
+    .careers-mainContent, .websites-mainContent {
         border-bottom: 1px solid #8d939ab2;
 
         .nav-item {
@@ -12,7 +20,7 @@
             .nav-link {
                 border: 2px solid #bfc4c8;
                 border-radius: 16px;
-                font-size: 18px;
+                font-size: 16px;
                 @include ease;
                 &:hover {
                     border-color: $text-color;
@@ -31,21 +39,37 @@
         border: 2px solid rgba(230, 221, 254, 0.6);
         border-radius: 20px;
         @include ease;
+        flex: 1;
+
         .job-title {
             font-size: 1.5rem;
             margin-inline-end: 0.7rem;
         }
-
+        .job-desc{
+            -webkit-box-orient: vertical;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            overflow: hidden;
+            max-width: 90%;
+        }
         .main-btn {
             .icon,
             svg path {
                 @include ease;
+            }
+            [dir="rtl"] &{
+                .icon{
+                    transform: rotate(270deg);
+                }
             }
             &:hover {
                 .icon {
                     transform: translate(10px, -5px);
                     svg path {
                         fill: $primary-color;
+                    }
+                    [dir="rtl"] &{
+                      transform: translate(-10px, -5px)rotate(270deg);
                     }
                 }
             }
@@ -63,6 +87,9 @@
     .job-type {
         font-size: 18px;
     }
+
+  
+   
     @media screen and (max-width: 991px) {
         // careers-main
         .careers-main {
@@ -75,8 +102,9 @@
             }
         }
         .status {
-            border-radius: 30px;
+            border-radius: 16px;
             font-size: 10px;
+            text-align: center;
         }
         .job-desc,
         .job-type {
@@ -91,6 +119,9 @@
         // job-card
         .job-card {
             border-radius: 16px;
+            .job-content {
+                text-align: center;
+            }
             .job-title {
                 font-size: 0.8rem;
                 margin-inline-end: 0.5rem;

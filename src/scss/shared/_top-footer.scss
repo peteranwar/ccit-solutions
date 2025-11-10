@@ -1,0 +1,124 @@
+    .top-footer {
+        background-color: $primary-color;
+        background-image: url("/assets/images/footer-mask-min.png");
+        background-position: 100%;
+        background-size: cover;
+        border-radius: 40px;
+        padding: 3rem 5rem;
+
+        .left {
+            h2 {
+                font-size: 42px;
+                font-weight: 800;
+                line-height: 57px;
+                color: $text-color;
+            }
+
+            p {
+                font-size: 20px;
+                line-height: 37px;
+            }
+        }
+
+        .right {
+            form {
+                position: relative;
+
+                input[type="email"] {
+                    height: 64px;
+                    width: 100%;
+                    border-radius: 10px;
+                    padding: 0 1rem;
+
+                    &::placeholder {
+                        font-size: 18px;
+                        font-weight: 600;
+                        color: #BFC4C8;
+                        font-size: 15px;
+                        letter-spacing: 1px;
+                    }
+                }
+
+                input[type="submit"] {
+                    position: absolute;
+                    height: 40px;
+                    width: 30%;
+                    border-radius: 8px;
+                    right: 1rem;
+                    background-color: $text-color;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 13px;
+                    color: #fff;
+
+                    [dir="rtl"] & {
+                        left: 1rem;
+                        right: auto;
+                    }
+                }
+            }
+        }
+    }
+
+
+// =====================  breakpoint (lg) =================
+@media screen and (max-width: 991px) {
+        .top-footer {
+            text-align: center;
+            border-radius: 24px;
+
+            .left {
+                p {
+                    br {
+                        display: none;
+                    }
+                }
+            }
+        }
+}
+
+// =====================  breakpoint (md) =================
+@media screen and (max-width: 768px) {
+        .top-footer {
+            padding: 3rem;
+
+            .left {
+                h2 {
+                    font-size: 18px;
+                    font-weight: 800;
+                    line-height: 22px;
+                }
+
+                p {
+                    font-size: 11px;
+                    line-height: 20px;
+                }
+            }
+
+            .right {
+                form {
+                    input[type="email"] {
+                        padding: 0 .5rem;
+                        height: 48px;
+                        width: 100%;
+
+                        &::placeholder {
+                            font-size: 10px;
+                            font-weight: 300;
+                        }
+                    }
+
+                    input[type="submit"] {
+                        height: 36px;
+                        width: 80px;
+                        right: .5rem;
+                        font-size: 11px;
+                        
+                        [dir="rtl"] & {
+                            left: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+}

@@ -1,11 +1,18 @@
 import Layout from '@/components/Layout'
+import ComponentSeo from '@/components/shared/ComponentSeo'
 import RequestProposal from '@/components/shared/RequestProposal'
+import Trans from 'next-translate/Trans'
+import useTranslation from 'next-translate/useTranslation'
 import Image from 'next/image'
 import React from 'react'
 
 const AboutUs = () => {
+    const { t } = useTranslation("common");
+
+
     return (
         <Layout>
+            <ComponentSeo title={"- About Us"} />
             <div className="about-page">
                 <div className="main-hero d-flex flex-column pt-5">
                     <div className="container mt-4 mt-lg-5">
@@ -15,10 +22,10 @@ const AboutUs = () => {
                                     <div className="row justify-content-center">
                                         <div className="col-lg-10 col-11">
                                             <h6 className="subtitle text-uppercase fw-bold">
-                                                about us
+                                                {t('about.hero.subtitle')}
                                             </h6>
                                             <h1 className="title text-white fw-bold">
-                                                We aim to create long-lasting digital products. By focusing on practical expertise in a specific area of technology, we can prevent unexpected issues and consistently deliver top-notch software.
+                                                {t('about.hero.title')}
                                             </h1>
                                         </div>
 
@@ -36,10 +43,10 @@ const AboutUs = () => {
 
 
                 {/* Mission & Method */}
-                <div className="mission-method_container mt-0 mt-lg-5">
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-lg-5 my-2 order-2 order-lg-1">
+                <div className="mission-method_container mt-0 mt-lg-5 mb-4">
+                    <div className="container pt-3">
+                        <div className="row align-items-center justify-content-center justify-content-lg-between">
+                            <div className="col-lg-4 col-md-8 col-sm-10 my-2 order-2 order-lg-1">
                                 <Image src="/assets/images/mission-method.png"
                                     alt="about-img" className='mission-method w-100'
                                     width={500} height={300} quality={100} />
@@ -47,21 +54,24 @@ const AboutUs = () => {
                             <div className="col-lg-7 my-2 order-1 order-lg-2">
                                 <div className="mission-method_content">
                                     <h4 className="display-6 fw-semibold mb-2 mb-lg-3">
-                                        Our Mission
+                                        {t('about.our_mission')}
                                     </h4>
-                                    <p className="fs-6 fw-medium fs-responsive mb-3 mb-lg-4">
-                                        At CCIT, we aim to create long-lasting digital products. By focusing on practical expertise in a specific area of technology, we can prevent unexpected issues and consistently deliver top-notch software.
+                                    <p className="fs-6 fw-medium fs-responsive mb-4 mb-lg-5 pb-2 pb-md-1">
+                                        {t('about.our_mission_desc')}
                                     </p>
 
-
                                     <h4 className="display-6 fw-semibold mb-2 mb-lg-3">
-                                        Our Method
+                                        {t('about.our_method')}
                                     </h4>
                                     <p className="fs-6 fs-responsive fw-medium mb-3 mb-lg-4">
-                                        Since 2013, we have finished over 40 web, mobile, and desktop projects in various fields like health, education, hospitality & commerce. We have collaborated with well-known brands such as Yelo, Al Ajlan group, Camel Step, and Makanat as our latest products we have built from scratch.
-                                        <br />
-                                        <br />
-                                        <span className="fs-5 fs-responsive fw-semibold">Our method is straightforward:</span> we establish partnerships with our clients and jointly strive to find the best solution for their business..
+                                        <Trans
+                                            i18nKey="common:about.our_method_desc"
+                                            components={{
+                                                0: <br />,
+                                                1: <br />,
+                                                2: <span className="fs-5 fs-responsive fw-semibold" />,
+                                            }}
+                                        />
                                     </p>
 
                                 </div>
@@ -74,10 +84,10 @@ const AboutUs = () => {
                 <div className="core-values_container pt-5 pb-4 mb-3">
                     <div className="container">
                         <h4 className="core-values_title mx-auto text-white fw-bold">
-                            Our core values
+                            {t('about.our_core_values.title')}
                         </h4>
                         <div className="row mt-5 pt-4 pt-lg-5">
-                            <div className="col-lg-3 col-6 my-3">
+                            <div className="col-lg-3 col-6 my-3 my-md-4">
                                 <div className="core-values_card text-center">
                                     <div className="icon-container mx-auto d-flex justify-content-center align-items-center">
                                         <Image src="/assets/images/messages-3.svg"
@@ -86,17 +96,16 @@ const AboutUs = () => {
                                     </div>
 
                                     <h5 className="core-values_cardTitle fw-bold text-white my-2 my-lg-3 pt-3">
-                                        Communication
+                                        {t('about.our_core_values.communication')}
                                     </h5>
 
                                     <p className="core-values_cardText text-white">
-                                        Prompt and clear communications provide visibility and increase speed of action.
+                                        {t('about.our_core_values.communication_desc')}
                                     </p>
                                 </div>
                             </div>
 
-
-                            <div className="col-lg-3 col-6 my-3">
+                            <div className="col-lg-3 col-6 my-3 my-md-4">
                                 <div className="core-values_card text-center">
                                     <div className="icon-container mx-auto d-flex justify-content-center align-items-center">
                                         <Image src="/assets/images/lovely.svg"
@@ -104,15 +113,15 @@ const AboutUs = () => {
                                             width={58} height={58} quality={100} />
                                     </div>
                                     <h5 className="core-values_cardTitle fw-bold text-white my-2 my-lg-3 pt-3">
-                                        Openness
+                                        {t('about.our_core_values.openness')}
                                     </h5>
                                     <p className="core-values_cardText text-white">
-                                        Transparency ensures understanding and alignment.
+                                        {t('about.our_core_values.openness_desc')}
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="col-lg-3 col-6 my-3">
+                            <div className="col-lg-3 col-6 my-3 my-md-4">
                                 <div className="core-values_card text-center">
                                     <div className="icon-container mx-auto d-flex justify-content-center align-items-center">
                                         <Image src="/assets/images/shield-tick.svg"
@@ -120,15 +129,15 @@ const AboutUs = () => {
                                             width={58} height={58} quality={100} />
                                     </div>
                                     <h5 className="core-values_cardTitle fw-bold text-white my-2 my-lg-3 pt-3">
-                                        Reliability
+                                        {t('about.our_core_values.reliability')}
                                     </h5>
                                     <p className="core-values_cardText text-white">
-                                        By keeping promises and delivering results, we demonstrate value and build trust.
+                                        {t('about.our_core_values.reliability_desc')}
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="col-lg-3 col-6 my-3">
+                            <div className="col-lg-3 col-6 my-3 my-md-4">
                                 <div className="core-values_card text-center">
                                     <div className="icon-container mx-auto d-flex justify-content-center align-items-center">
                                         <Image src="/assets/images/teacher.svg"
@@ -136,10 +145,10 @@ const AboutUs = () => {
                                             width={58} height={58} quality={100} />
                                     </div>
                                     <h5 className="core-values_cardTitle fw-bold text-white my-2 my-lg-3 pt-3">
-                                    Education
+                                        {t('about.our_core_values.education')}
                                     </h5>
                                     <p className="core-values_cardText text-white">
-                                        Continuous improvement keeps us moving to the next level and delivering beyond expectations.
+                                        {t('about.our_core_values.education_desc')}
                                     </p>
                                 </div>
                             </div>

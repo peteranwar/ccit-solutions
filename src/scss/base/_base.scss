@@ -1,5 +1,4 @@
 // Base -reset
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
 
 *,
 *::before,
@@ -15,7 +14,11 @@ html {
 
 body {
   color: $text-color;
-  font-family: "gilroy-reg", sans-serif !important;
+  font-family: 'Prompt', sans-serif !important;
+  [dir="rtl"] &{
+    text-align: right;
+    font-family: 'IBM Plex Sans Arabic', sans-serif !important;
+  }
 }
 
 * {
@@ -32,10 +35,6 @@ a {
   text-decoration: none;
 }
 
-// img {
-//   width: 100%;
-//   height: auto;
-// }
 
 input,
 textarea,
@@ -47,7 +46,7 @@ select {
 
 /* style scrollbar */
 ::-webkit-scrollbar {
-  width: 0.2em;
+  width: 0.4em;
   height: 0.2em;
   scroll-margin: 1em 0.5em 1em 1em;
   margin: 0 1rem;

@@ -31,6 +31,8 @@
     transform: scaleX(0);
     transform-origin: bottom left;
     [dir="rtl"] & {
+      left: auto;
+      right: 0;
       transform-origin: right;
     }
   }

@@ -58,8 +58,9 @@
         &:hover {
             color: $primary-color;
             border-color: #a5a3a8;
-            svg{
+            svg, path{
                 fill: $primary-color;
+                color: $primary-color;
             }
 
             &:after {
@@ -120,7 +121,8 @@
             &::after, &::before{
                 background-color: $primary-color !important;
             }
-            
         }
     }
 }
+
+

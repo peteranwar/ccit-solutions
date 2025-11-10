@@ -1,0 +1,253 @@
+{
+  "about": {
+    "hero": {
+      "subtitle": "حول الشركة",
+      "title": "نصمم ونطور برمجيات مخصصة ونقدم مزيجًا من الحلول التقنية والسحابية لتعمل على منصات تشغيل متعددة لتمكين الشركات الناشئة والمؤسسات الرائدة.\n\n"
+    },
+    "our_core_values": {
+      "communication": "التواصل",
+      "communication_desc": "الكفاءة في التواصل تساعدنا بالرؤية الواضحة وتزيد من سرعة العمل.",
+      "education": "التعليم",
+      "education_desc": "التعلم المستمر يجعلنا نتحسن ويرفع معاييرنا ويساعدنا في تقديم ما هو أبعد من التوقعات.",
+      "openness": "الشفافية",
+      "openness_desc": "الشفافية تضمن التفاهم والمواءمة.",
+      "reliability": "الموثوقية",
+      "reliability_desc": "من خلال الوفاء بالوعود وتحقيق النتائج ، نظهر القيمة ونبني الثقة.",
+      "title": "قيمنا الأساسية"
+    },
+    "our_method": "طريقتنا",
+    "our_method_desc": "منذ عام 2013، أنهينا أكثر من 40 مشروعًا للويب والجوال وسطح المكتب في مختلف المجالات مثل الصحة والتعليم والضيافة والتجارة. لقد تعاوننا مع علامات تجارية مشهورة مثل Yelo ومجموعة Al Ajlan و Camel Step و Ezhalha و Makanat كأحدث منتجاتنا التي قمنا ببنائها من الصفر. <0/><1/><2>طريقتنا واضحة: </2> نقيم شراكات مع عملائنا ونسعى جاهدين لإيجاد أفضل حل لأعمالهم..",
+    "our_mission": "مهمتنا",
+    "our_mission_desc": "في CCIT، نهدف إلى إنشاء منتجات رقمية طويلة الأمد. من خلال التركيز على الخبرة العملية في مجال تطوير الويب والتطبيقات بأحدث التكنولوجيا، نقدم أفضل الطرق لحل المشاكل الغير متوقعة وتسليم المشاريع بأعلى جودة ممكن. "
+  },
+  "blog": {
+    "hero": {
+      "subtitle": "أخبار الشركة",
+      "title": "أفكارنا حول البرمجة والذكاء الاصطناعي ومستقبل هندسة البرمجيات."
+    }
+  },
+  "blogDetails": {
+    "slidTitle": "قد يعجبك أيضا"
+  },
+  "careers": {
+    "apply_for_this_position": "تقدم بطلب للحصول على هذا المنصب",
+    "apply_job": "تقدم بطلب وظيفة",
+    "apply_now": "قدم الآن",
+    "hero": {
+      "desc": "نحن نقدم فرصاً لخريجي الجامعات الذين يتطلعون إلى بدء حياتهم المهنية، بالإضافة إلى المهنيين ذوي الخبرة الذين يتطلعون إلى تعزيز حياتهم المهنية. انظر أدناه للحصول على الوظائف المتاحة وفرصة الانضمام إلى فريقنا.",
+      "subtitle": "الوظائف",
+      "title": "في CCIT Solutions ، نبحث دائمًا عن المزيد من المواهب الفريدة."
+    },
+    "job_overview": "Job Overview",
+    "job_request_sent_successfully": "تم ارسال طلبك بنجاح",
+    "responsibility": "المسؤولية",
+    "allJobs":"جميع الوظائف"
+  },
+  "contact": {
+    "form": {
+      "check_1": "تعيين فريق تطوير خاص",
+      "check_2": "بناء منتج رقمي جديد",
+      "check_3": "تصميم UI/UX ",
+      "check_4": "إستشارات تقنية",
+      "check_5": "شيء آخر",
+      "cover_letter": "غطاء",
+      "cover_letter_place": "اكتب رسالتك هنا ... ",
+      "job_h6": "باستخدام هذا النموذج، فإنك توافق على الشروط والأحكام الخاصة بنا.",
+      "job_hent": "الحد الأقصى للحجم: 5 ميغابايت النوع (الأنواع) المسموح بها: .pdf",
+      "job_title": "تقدم بطلب للحصول على هذا المنصب",
+      "job_up": "قم بتحميل السيرة الذاتية",
+      "lab_area": "حول المنتج الخاص بي",
+      "lab_check": "أرغب في :",
+      "lab_email": "البريد الإلكتروني",
+      "lab_name": "إسمك",
+      "lab_phone": "رقم الجوال",
+      "location": "العباس بن عبدالمطلب ، حي التعاون ، مبنى جالكسي لايف ، مكتب 8",
+      "place_area": "التفاصيل المطلوبة, الوقت الزمني للتنفيذ, التكلفة ..... ",
+      "place_email": "أدخل بريدك الإلكتروني",
+      "place_name": "الإسم كامل",
+      "place_phone": "ادخل رقم جوالك",
+      "send_email": "أو أرسل لنا بريدًا إلكترونيًا: <0> sales@ccit.sa </0>",
+      "sub": "إرسال"
+    },
+    "msg_sent_successfully": "تم ارسال الرسالة بنجاح",
+    "subtitle": "تواصل معنا",
+    "title": "أخبرنا عن مشروعك."
+  },
+  "footer": {
+    "company": "شركة",
+    "copyright": "Copyright © 2022 CCIT Software Solutions, Based In <0>Riyadh</0> ❤️",
+    "help": "المساعدة",
+    "lets_talk": "لنتحدث",
+    "please_enter_valid_email": "الرجاء إدخال بريد إلكتروني صحيح!",
+    "privacy_policy": "سياسة الخصوصية",
+    "subscribe_sent_successfully": "!تم ارسال الاشتراك بنجاح",
+    "subscribe_to_our_newsletter": "اشترك في القائمة البريدية"
+  },
+  "home": {
+    "about": {
+      "clients_satisfied": "عملاء راضون",
+      "completed_projects": "المشاريع المكتملة",
+      "desc": "قيمنا الأساسية هي الجودة العالية والتواصل الفعال والأسعار الشفافة.",
+      "subtitle": "CCIT هي شركة تطوير برمجيات التطبيقات والويب",
+      "title": "قم بزيادة ورفع أداء مشروعك مع فريق تقني عالي الأداء ومن أفضل الكفاءات.",
+      "years_of_experience": "سنوات الخبرة"
+    },
+    "aboutDev": {
+      "IT_consulting": "استشارات تقنية المعلومات",
+      "IT_consulting_desc": "تعمل خدمات استشارات تكنولوجيا المعلومات لدينا على توجيه الشركات من خلال تحدياتها الرقمية، وتقديم رؤية خبرائنا لتحسين خيارات واستراتيجيات الشركة.",
+      "data_driven_development": "تطوير البيانات",
+      "data_driven_development_desc": "نستخدم البيانات للتوجيه الأفضل لقرارات التطوير لدينا، وضمان توافق حلولنا مع متطلبات السوق وسلوكيات المستخدمين، مما يؤدي إلى إنشاء منتجات أكثر فعالية ومصممة خصيصًا لمتطلبات السوق.",
+      "mobile_development": "تطوير التطبيقات",
+      "mobile_development_desc": "نقوم بإنشاء التطبيقات عالية الأداء لنظامي التشغيل iOS و Android، مما يضمن تجربة مستخدم سلسة وسريعة الاستجابة مصممة خصيصًا لاحتياجات المستخدم الحديثة.",
+      "product_development": "تطوير المنتجات",
+      "product_development_desc": "نحن نحول أفكارك إلى حلول برمجية جاهزة للسوق من الألف إلى الياء، مع الأخذ في الاعتبار قابلية التوسع والجودة والتخصيص",
+      "subtitle": "عبر خبرات متميزة نطور منتجات وخدمات إستثنائية باعلى المعايير.",
+      "testing_qa": "الاختبار وضمان الجودة",
+      "testing_qa_desc": "الجودة هي أولويتنا. من خلال الاختبارات المتكررة للأنظمة بشكل يدوي وآلي، ونسعى الى أن نضمن أن منتجاتنا مستقرة وخالية من الأخطاء قدر الإمكان وتفي بأعلى معايير الأداء.",
+      "title": "ما هي أولويتك الآن؟",
+      "ui_ux_design": "تصميم واجهة المستخدم/تجربة المستخدم",
+      "ui_ux_design_desc": "يقوم فريق UX/UI لدينا بتصميم واجهات بديهية وجذابة بصريًا. نركز على التصاميم التي تركز على المستخدم، مما يضمن أن يكون كل تفاعل سلسًا وجذابًا للمستخدم النهائي."
+    },
+    "hero": {
+      "desc": "نحن نصمم ونطور ونقدم مزيجًا من حلول التكنولوجيا السحابية عبر التطبيقات والويب لتمكين الشركات الناشئة والمؤسسات الرائدة.",
+      "partners_title": "نجحنا بكسب ثقة المؤسسات والأعمال الرائدة والشركات الناشئة، نفخر بشراكتهم : ",
+      "title": "نحول الأفكار إلى منتجات <0> رقمية </0>",
+      "welcome_ccit": "مرحبًا بكم في CCIT"
+    },
+    "ourWork": {
+      "subtitle": "أعمالنا",
+      "title": "نؤمن بأن ” أعمالنا هي صوتنا الوحيد ”"
+    },
+    "technologies": {
+      "subtitle": "التقنيات",
+      "title": "Tech stack لخدمتك اليوم وغداً وعندما تسمر بالتطوير بمعدل 10x في الـ 24 شهرًا القادمة."
+    }
+  },
+  "navbar": {
+    "about": "من نحن",
+    "blog": "الأخبار",
+    "careers": "وظائف",
+    "contact": "تواصل معنا",
+    "home": "الرئيسية",
+    "works": "أعمالنا"
+  },
+  "ourWorks": {
+    "hero": {
+      "subtitle": "أعمالنا",
+      "title": "نؤمن بأن ” أعمالنا هي صوتنا الوحيد ”"
+    }
+  },
+  "privacy": {
+    "date": "Last updated: 09/07/2023",
+    "details": {
+      "Parties": {
+        "p_one": "Finally, we may obtain information about you from third parties, including from vendors and service providers who may collect information on our behalf, such as:",
+        "p_three": "Any information we obtain from third parties will be treated in accordance with this Privacy Policy.We are not responsible or liable for the accuracy of the information provided to us by third parties and are not responsible for any third party's policies or practices. For more information, see the section below, Third Party Websites and Links.",
+        "p_two": "- Companies who support our Site and Services, such as ccit. <1/> - Our payment processors, who collect payment information(e.g., bank account, credit or debit card information, billing address) to process your payment in order to fulfill your orders and provide you with products or services you have requested, in order to perform our contract with you. <2/> - When you visit our Site, open or click on emails we send you, or interact with our Services or advertisements, we, or third parties we work with, may automatically collect certain information using online tracking technologies such as pixels, web beacons, software developer kits, third - party libraries, and cookies.",
+        "title": "Information We Obtain from Third Parties"
+      },
+      "catPersonal": {
+        "p_one": "- Identifiers such as basic contact details and certain order and account information <1/> - Commercial information such as records of products or services purchased and shopping information <2/> - Internet or other similar network activity, such as Usage Data Categories of Recipients <3/> - Business and marketing partners",
+        "title": "Category of Personal Information"
+      },
+      "catRecipients": {
+        "p_one": "- Vendors and third parties who perform services on our behalf(such as Internet service providers, payment processors, fulfillment partners, customer support partners and data analytics providers) <1/> - Business and marketing partners <2/> - Affiliates",
+        "p_three": "We have \"sold\" and \"shared\"(as those terms are defined in applicable law) personal information over the preceding 12 months for the purpose of engaging in advertising and marketing activities, as follows.",
+        "p_two": "We do not use or disclose sensitive personal information for the purposes of inferring characteristics about you.",
+        "title": "Categories of Recipients:"
+      },
+      "category": {
+        "p_one": "- Identifiers such as basic contact details and certain order and account information <1/> - Commercial information such as order information, shopping information and customer support information <2/> - Internet or other similar network activity, such as Usage Data",
+        "title": "Category:"
+      },
+      "changes": {
+        "p_one": "To provide the Services, we collect and have collected over the past 12 months personal information about you from a variety of sources, as set out below.The information that we collect and use varies depending on how you interact with us.",
+        "p_two": "In addition to the specific uses set out below, we may use information we collect about you to communicate with you, provide the Services, comply with any applicable legal obligations, enforce any applicable terms of service, and to protect or defend the Services, our rights, and the rights of our users or others.",
+        "title": "Changes to This Privacy Policy"
+      },
+      "complaints": {
+        "p_one": "If you have complaints about how we process your personal information, please contact us using the contact details provided below.If you are not satisfied with our response to your complaint, depending on where you live you may have the right to appeal our decision by contacting us using the contact details set out below, or lodge your complaint with your local data protection authority.",
+        "title": "Complaints"
+      },
+      "contact": {
+        "p_one": "Should you have any questions about our privacy practices or this Privacy Policy, or if you would like to exercise any of the rights available to you, email us at info @ccit.sa or contact us at Anas Bin Malik street, Riyadh, Riyadh, 13312, Saudi Arabia.",
+        "p_two": "For the purpose of applicable data protection laws, we are the data controller of your personal information.",
+        "title": "Contact"
+      },
+      "cookies": {
+        "p_one": "Most browsers automatically accept Cookies by default, but you can choose to set your browser to remove or reject Cookies through your browser controls.Please keep in mind that removing or blocking Cookies can negatively impact your user experience and may cause some of the Services, including certain features and general functionality, to work incorrectly or no longer be available.Additionally, blocking Cookies may not completely prevent how we share information with third parties such as our advertising partners.",
+        "title": "Cookies"
+      },
+      "directly": {
+        "p_one": "Information that you directly submit to us through our Services may include: <1/> - Basic contact details including your name, address, phone number, email. <2/> - Order information including your name, billing address, shipping address, payment confirmation, email address, phone number. <3/> - Account information including your username, password, security questions. <4/> - Shopping information including the items you view, put in your cart or add to your wishlist. <5/> - Customer support information including the information you choose to include in communications with us, for example, when sending a message through the Services. <6/> Some features of the Services may require you to directly provide us with certain information about yourself.You may elect not to provide this information, but doing so may prevent you from using or accessing these features.",
+        "title": "Information We Collect Directly from You"
+      },
+      "disclose": {
+        "p_one": "In certain circumstances, we may disclose your personal information to third parties for legitimate purposes subject to this Privacy Policy.Such circumstances may include:",
+        "p_three": "We have, in the past 12 months disclosed the following categories of personal information and sensitive personal information(denoted by *) about users for the purposes set out above in \"How we Collect and Use your Personal Information\" and \"How we Disclose Personal Information\":",
+        "p_two": "- With vendors or other third parties who perform services on our behalf(e.g., IT management, payment processing, data analytics, customer support, cloud storage, fulfillment and shipping). <1/> - When you direct, request us or otherwise consent to our disclosure of certain information to third parties, such as to ship you products or through your use of social media widgets or login integrations, with your consent. <2/> - With our affiliates or otherwise within our corporate group, in our legitimate interests to run a successful business. <3/> - In connection with a business transaction such as a merger or bankruptcy, to comply with any applicable legal obligations(including to respond to subpoenas, search warrants and similar requests), to enforce any applicable terms of service, and to protect or defend the Services, our rights, and the rights of our users or others.",
+        "title": "How We Disclose Personal Information"
+      },
+      "howUse": {
+        "p_one": "- Providing Products and Services.We use your personal information to provide you with the Services in order to perform our contract with you, including to process your payments, fulfill your orders, to send notifications to you related to you account, purchases, returns, exchanges or other transactions, to create, maintain and otherwise manage your account, to arrange for shipping, facilitate any returns and exchanges and to enable you to post reviews. <1/> - Marketing and Advertising.We use your personal information for marketing and promotional purposes, such as to send marketing, advertising and promotional communications by email, text message or postal mail, and to show you advertisements for products or services.This may include using your personal information to better tailor the Services and advertising on our Site and other websites. <2/> - Security and Fraud Prevention.We use your personal information to detect, investigate or take action regarding possible fraudulent, illegal or malicious activity.If you choose to use the Services and register an account, you are responsible for keeping your account credentials safe.We highly recommend that you do not share your username, password, or other access details with anyone else. If you believe your account has been compromised, please contact us immediately. <3/> - Communicating with you.We use your personal information to provide you with customer support and improve our Services.This is in our legitimate interests in order to be responsive to you, to provide effective services to you, and to maintain our business relationship with you.",
+        "title": "How We Use Your Personal Information"
+      },
+      "international": {
+        "p_one": "Please note that we may transfer, store and process your personal information outside the country you live in, including the United States.Your personal information is also processed by staff and third party service providers and partners in these countries. <1/> If we transfer your personal information out of Europe, we will rely on recognized transfer mechanisms like the European Commission's Standard Contractual Clauses, or any equivalent contracts issued by the relevant competent authority of the UK, as relevant, unless the data transfer is to a country that has been determined to provide an adequate level of protection.",
+        "title": "International Users"
+      },
+      "p_one": "This Privacy Policy describes how CCIT Solutions(the \"Site\",\"we\", \"us\", or \"our\") collects, uses, and discloses your personal information when you visit, use our services, or make a purchase from <0>https://ccit.sa</0>  (the \"Site\") or otherwise communicate with us (collectively, the \"Services\"). For purposes of this Privacy Policy, \"you\" and \"your\" means you as the user of the Services, whether you are a customer, website visitor, or another individual whose information we have collected pursuant to this Privacy Policy.",
+      "p_two": "Please read this Privacy Policy carefully.By using and accessing any of the Services, you agree to the collection, use, and disclosure of your information as described in this Privacy Policy.If you do not agree to this Privacy Policy, please do not use or access any of the Services.",
+      "personal": {
+        "p_one": "The types of personal information we obtain about you depends on how you interact with our Site and use our Services.When we use the term \"personal information\", we are referring to information that identifies, relates to, describes or can be associated with you.The following sections describe the categories and specific types of personal information we collect.",
+        "title": "What Personal Information We Collect"
+      },
+      "rights": {
+        "p_one": "Depending on where you live, you may have some or all of the rights listed below in relation to your personal information.However, these rights are not absolute, may apply only in certain circumstances and, in certain cases, we may decline your request as permitted by law.",
+        "p_three": "You may exercise any of these rights where indicated on our Site or by contacting us using the contact details provided below.",
+        "p_two": "- Right to Access / Know.You may have a right to request access to personal information that we hold about you, including details relating to the ways in which we use and share your information. <1/> - Right to Delete.You may have a right to request that we delete personal information we maintain about you. <2/> - Right to Correct.You may have a right to request that we correct inaccurate personal information we maintain about you. <3/> - Right of Portability.You may have a right to receive a copy of the personal information we hold about you and to request that we transfer it to a third party, in certain circumstances and with certain exceptions. <4/> - Right to Opt out of Sale or Sharing or Targeted Advertising.You may have a right to direct us not to \"sell\" or \"share\" your personal information or to opt out of the processing of your personal information for purposes considered to be \"targeted advertising\", as defined in applicable privacy laws.Please note that if you visit our Site with the Global Privacy Control opt - out preference signal enabled, depending on where you are, we will automatically treat this as a request to opt - out of the \"sale\" or \"sharing\" of information for the device and browser that you use to visit the Site. <5/> - Right to Limit and / or Opt out of Use and Disclosure of Sensitive Personal Information.You may have a right to direct us to limit our use and / or disclosure of sensitive personal information to only what is necessary to perform the Services or provide the goods reasonably expected by an average individual. <6/> - Restriction of Processing: You may have the right to ask us to stop or restrict our processing of personal information. <7/> - Withdrawal of Consent: Where we rely on consent to process your personal information, you may have the right to withdraw this consent. <8/> - Appeal: You may have a right to appeal our decision if we decline to process your request.You can do so by replying directly to our denial. <9/> - Managing Communication Preferences: We may send you promotional emails, and you may opt out of receiving these at any time by using the unsubscribe option displayed in our emails to you.If you opt out, we may still send you non - promotional emails, such as those about your account or orders that you have made.",
+        "title": "Your Rights and Choices"
+      },
+      "security": {
+        "p_one": "Please be aware that no security measures are perfect or impenetrable, and we cannot guarantee \"perfect security.\" In addition, any information you send to us may not be secure while in transit.We recommend that you do not use unsecure channels to communicate sensitive or confidential information to us.",
+        "p_two": "How long we retain your personal information depends on different factors, such as whether we need the information to maintain your account, to provide the Services, comply with legal obligations, resolve disputes or enforce other applicable contracts and policies.",
+        "title": "Security and Retention of Your Information"
+      },
+      "thirdParty": {
+        "p_one": "Our Site may provide links to websites or other online platforms operated by third parties.If you follow links to sites not affiliated or controlled by us, you should review their privacy and security policies and other terms and conditions.We do not guarantee and are not responsible for the privacy or security of such sites, including the accuracy, completeness, or reliability of information found on these sites.Information you provide on public or semi - public venues, including information you share on third - party social networking platforms may also be viewable by other users of the Services and / or users of those third - party platforms without limitation as to its use by us or by a third party.Our inclusion of such links does not, by itself, imply any endorsement of the content on such platforms or of their owners or operators, except as disclosed on the Services.",
+        "p_two": "The Services are not intended to be used by children, and we do not knowingly collect any personal information about children.If you are the parent or guardian of a child who has provided us with their personal information, you may contact us using the contact details set out below to request that it be deleted.",
+        "title": "Third Party Websites and Links"
+      },
+      "through": {
+        "p_one": "We also automatically collect certain information about your interaction with the Services(\"Usage Data\").To do this, we may use cookies, pixels and similar technologies(\"Cookies\").Usage Data may include information about how you access and use our Site and your account, including device information, browser information, information about your network connection, your IP address and other information regarding your interaction with the Services.",
+        "title": "Information We Collect through Cookies"
+      },
+      "user": {
+        "p_one": "The Services may enable you to post product reviews and other user - generated content.If you choose to submit user generated content to any public area of the Services, this content will be public and accessible by anyone.",
+        "p_two": "We do not control who will have access to the information that you choose to make available to others, and cannot ensure that parties who have access to such information will respect your privacy or keep it secure.We are not responsible for the privacy or security of any information that you make publicly available, or for the accuracy, use or misuse of any information that you disclose or receive from third parties.",
+        "title": "User Generated Content"
+      }
+    },
+    "title": "Privacy Policy"
+  },
+  "requestProposal": {
+    "subtitle": "انطلق اليوم",
+    "title": "نهجنا بسيط : بناء شراكات مع عملائنا حيث نعمل معًا من أجل الحل الأمثل لأعمالهم."
+  },
+  "shared": {
+    "apply": "تنفيذ",
+    "request_proposal": "طلب عرض سعر",
+    "show_less": "إظهار أقل",
+    "show_more": "عرض المزيد",
+    "view": "عرض",
+    "view_more": "عرض المزيد...",
+    "no_data_found_msg": "نأسف، لا توجد بيانات متاحة في الوقت الحالي",
+    "download_on_google_play": "تنزيل من جوجل بلاي"
+  },
+  "topFooter": {
+    "desc": "اشترك لتلقي آخر الأخبار والتحديثات حول CCIT. نعدك بعدم إرسال رسائل غير مرغوب فيها إليك!",
+    "placeInput": "أدخل عنوان البريد الالكتروني",
+    "title": "ابقى على اطلاع",
+    "valueInput": "متابعة"
+  }
+}

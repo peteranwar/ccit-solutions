@@ -1,48 +1,77 @@
 .our-works_page {
+    background-color: #010101;
     .main-hero {
-        min-height: 55vh;
+        min-height: 45vh;
     }
 
     // Project Card
     .project-card {
-        border: 2px solid #e6ddfe;
-        border-radius: 22px;
+        border: 4px solid #1A2D29;
+        border-radius: 24px;
+        backdrop-filter: blur(8px);
+        box-shadow: 10px 10px 35px #D3D3D30D;
+        // height: 400px;
+
         @include ease;
+        .mob-link {
+            background-color: #e8e7e733;
+            border: 1px solid #d9d9d91f;
+            padding: 0.7rem .8rem;
+            border-radius: 8px;
+            backdrop-filter: blur(8px);
+            @include ease;
+            &:hover {
+                background-color: #d9d9d91f;
+                backdrop-filter: blur(0);
+            }
+        }
 
         .project-cardContent {
-            padding-inline-start: 3rem;
+            padding-inline-start: 2rem;
             .project-title {
                 font-size: 1.75rem;
-              @include ease;
+                @include ease;
             }
 
             .project-text {
-                font-size: 1.1rem;
+                font-size: 1rem;
+                -webkit-box-orient: vertical;
+                display: -webkit-box;
+                -webkit-line-clamp: 5;
+                overflow: hidden;
+                color: #b9b9b9;
+            }
+            .main-btn {
+                height: 44px;
+                min-height: 44px;
+            }
+            a {
+                margin-inline-end: 0.75rem;
+                img {
+                    object-fit: contain;
+                }
             }
         }
         .project-img {
             height: 100%;
             width: 100%;
-            border-radius: 22px;
+            border-radius: 20px;
             object-fit: cover;
             @include ease;
         }
-        &:hover{
+        &:hover {
             transform: translateY(2px);
             border-color: $primary-color;
-            .project-img{
-                filter: grayscale(1);
-            }
-            .project-title{
+            .project-title {
                 color: $primary-color;
             }
         }
     }
 
     @media screen and (max-width: 991px) {
-        .main-hero {
-            min-height: 40vh;
-        }
+        // .main-hero {
+        //     min-height: 40vh;
+        // }
 
         // Project Card
         .project-card {
@@ -60,8 +89,8 @@
                 }
             }
             .project-img {
-                border-radius: 16px;
-                height: 200px;
+                border-radius: 14px;
+                height: 250px;
             }
         }
     }

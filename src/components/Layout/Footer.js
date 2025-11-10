@@ -1,10 +1,52 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import React from 'react'
-import MainButton from '../shared/MainButton'
-import { Accordion } from 'react-bootstrap'
+import useTranslation from 'next-translate/useTranslation';
+import Image from 'next/image';
+import Link from 'next/link';
+import Accordion from 'react-bootstrap/Accordion';
+
+import { createAPIEndpoint } from '@/api';
+import Trans from 'next-translate/Trans';
+import { useState } from 'react';
+import MainButton from '../shared/MainButton';
 
 const Footer = () => {
+    const { t } = useTranslation("common");
+    const [email, setEmail] = useState()
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [feedback, setFeedback] = useState();
+
+
+    async function handleFormSubmit(e) {
+        e.preventDefault();
+        const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+        if (!email || regex.test(email) === false) {
+            setFeedback({
+                msg: t('footer.please_enter_valid_email'),
+                valid: false
+            });
+            return;
+        }
+        setIsSubmitting(true);
+
+        try {
+            const res = await createAPIEndpoint(`subscribe`).create({ email });
+            if (res.data.message == "OK") {
+                setIsSubmitting(false);
+                setFeedback({
+                    msg: t('footer.subscribe_sent_successfully'),
+                    valid: true
+                });
+                setEmail('');
+                e.target.reset();
+            }
+        } catch (error) {
+            setIsSubmitting(false);
+            console.log('Error!!!', error)
+        }
+
+
+    }
+
 
     return (
         <footer className='mt-3 mt-md-4'>
@@ -22,28 +64,28 @@ const Footer = () => {
                                 <div className="row">
                                     <div className="col-sm-4 my-2">
                                         <div className="footer-links">
-                                            <h6 className="footer-title fs-5 fw-bold mb-4">
-                                                Company
+                                            <h6 className="footer-title fs-6 fw-bold mb-4">
+                                                {t('footer.company')}
                                             </h6>
                                             <ul className="list-unstyled">
-                                                <li className='mb-2'>
-                                                    <Link href="/services" className='fs-6 fw-medium'>Services</Link>
-                                                </li>
+                                                {/* <li className='mb-2'>
+                                                    <a className='fs-7 fw-medium'>Services</a>
+                                                </li> */}
 
                                                 <li className='mb-2'>
-                                                    <Link href="/our-Works" className='fs-6 fw-medium'>
-                                                        Our Works
+                                                    <Link href="/our-works" className='fs-7 fw-medium'>
+                                                        {t('navbar.works')}
                                                     </Link>
                                                 </li>
 
+                                                {/* <li className='mb-2'>
+                                                    <Link href="/blog" className='fs-7 fw-medium'>
+                                                        {t('navbar.blog')}
+                                                    </Link>
+                                                </li> */}
                                                 <li className='mb-2'>
-                                                    <a href="/blog" target='_blank' className='fs-6 fw-medium'>
-                                                        Blog
-                                                    </a>
-                                                </li>
-                                                <li className='mb-2'>
-                                                    <Link href="/about-us" className='fs-6 fw-medium'>
-                                                        About us
+                                                    <Link href="/about-us" className='fs-7 fw-medium'>
+                                                        {t('navbar.about')}
                                                     </Link>
                                                 </li>
                                             </ul>
@@ -52,30 +94,30 @@ const Footer = () => {
 
                                     <div className="col-sm-4 my-2">
                                         <div className="footer-links">
-                                            <h6 className="footer-title fs-5 fw-bold mb-4">
-                                                Help
+                                            <h6 className="footer-title fs-6 fw-bold mb-4">
+                                                {t('footer.help')}
                                             </h6>
                                             <ul className="list-unstyled">
                                                 <li className='mb-2'>
-                                                    <Link href="/careers" className='fs-6 fw-medium'>
-                                                        Careers
+                                                    <Link href="/careers" className='fs-7 fw-medium'>
+                                                        {t('navbar.careers')}
                                                     </Link>
                                                 </li>
 
-                                                <li className='mb-2'>
-                                                    <Link href="/FAQs" className='fs-6 fw-medium'>
+                                                {/* <li className='mb-2'>
+                                                    <a className='fs-7 fw-medium'>
                                                         FAQs
-                                                    </Link>
-                                                </li>
+                                                    </a>
+                                                </li> */}
 
                                                 <li className='mb-2'>
-                                                    <Link href="/contact-us" className='fs-6 fw-medium'>
-                                                        Contact us
+                                                    <Link href="/contact-us" className='fs-7 fw-medium'>
+                                                        {t('navbar.contact')}
                                                     </Link>
                                                 </li>
                                                 <li className='mb-2'>
-                                                    <Link href="/privacy-policy" className='fs-6 fw-medium'>
-                                                        Privacy Policy
+                                                    <Link href="/privacy-policy" className='fs-7 fw-medium'>
+                                                        {t('footer.privacy_policy')}
                                                     </Link>
                                                 </li>
                                             </ul>
@@ -85,25 +127,33 @@ const Footer = () => {
 
                                     <div className="col-sm-4 my-2">
                                         <div className="footer-links">
-                                            <h6 className="footer-title fs-5 fw-bold mb-4">
-                                                Let's talk!
+                                            <h6 className="footer-title fs-6 fw-bold mb-4">
+                                                {t('footer.lets_talk')}
                                             </h6>
                                             <ul className="list-unstyled">
                                                 <li className='mb-2'>
-                                                    <a className='email fs-6 fw-medium'
-                                                        href='mailto:Info@CCIT.SA' target='_blank'>
-                                                        Info@CCIT.SA
-                                                    </a>
-                                                </li>
-
-                                                <li className='mb-2'>
-                                                    <a className='email fs-6 fw-medium'
+                                                    <a className='email fs-7 fw-medium'
                                                         href='mailto:Sales@CCIT.SA' target='_blank'>
                                                         Sales@CCIT.SA
                                                     </a>
                                                 </li>
+
+                                                <li className='mb-2'>
+                                                    <a className='email fs-7 fw-medium'
+                                                        href='mailto:support@CCIT.SA' target='_blank'>
+                                                        Support@CCIT.SA
+                                                    </a>
+                                                </li>
+
+
+
+
                                             </ul>
                                         </div>
+                                        <a href="https://wa.me/message/3R7SF4MG2S7MP1" target="_blank">
+                                            <Image src='/assets/images/whatsapp-img.jpeg' alt='whatsapp' className='mx-auto whatsapp-img'
+                                                width={120} height={50} />
+                                        </a>
 
                                     </div>
                                 </div>
@@ -119,29 +169,29 @@ const Footer = () => {
                             <Accordion.Item eventKey="0">
                                 <Accordion.Header>
                                     <h6 className="fs-6 fw-semibold">
-                                        Company
+                                        {t('footer.company')}
                                     </h6>
                                 </Accordion.Header>
                                 <Accordion.Body>
                                     <ul className="list-unstyled footer-links">
-                                        <li className='mb-2'>
-                                            <Link href="/services" className='fs-6 fw-medium'>Services</Link>
-                                        </li>
+                                        {/* <li className='mb-2'>
+                                            <a  className='fs-7 fw-medium'>Services</a>
+                                        </li> */}
 
                                         <li className='mb-2'>
-                                            <Link href="/our-Works" className='fs-6 fw-medium'>
-                                                Our Works
+                                            <Link href="/our-works" className='fs-7 fw-medium'>
+                                                {t('navbar.works')}
                                             </Link>
                                         </li>
 
+                                        {/* <li className='mb-2'>
+                                            <Link href="/blog" className='fs-7 fw-medium'>
+                                                {t('navbar.blog')}
+                                            </Link>
+                                        </li> */}
                                         <li className='mb-2'>
-                                            <a href="/blog" target='_blank' className='fs-6 fw-medium'>
-                                                Blog
-                                            </a>
-                                        </li>
-                                        <li className='mb-2'>
-                                            <Link href="/about-us" className='fs-6 fw-medium'>
-                                                About us
+                                            <Link href="/about-us" className='fs-7 fw-medium'>
+                                                {t('navbar.about')}
                                             </Link>
                                         </li>
                                     </ul>
@@ -150,31 +200,31 @@ const Footer = () => {
                             <Accordion.Item eventKey="1">
                                 <Accordion.Header>
                                     <h6 className="fs-6 fw-semibold">
-                                        Help
+                                        {t('footer.help')}
                                     </h6>
                                 </Accordion.Header>
                                 <Accordion.Body>
                                     <ul className="list-unstyled footer-links">
                                         <li className='mb-2'>
-                                            <Link href="/careers" className='fs-6 fw-medium'>
-                                                Careers
+                                            <Link href="/careers" className='fs-7 fw-medium'>
+                                                {t('navbar.careers')}
                                             </Link>
                                         </li>
-
+                                        {/* 
                                         <li className='mb-2'>
-                                            <Link href="/FAQs" className='fs-6 fw-medium'>
+                                            <Link href="/FAQs" className='fs-7 fw-medium'>
                                                 FAQs
                                             </Link>
-                                        </li>
+                                        </li> */}
 
                                         <li className='mb-2'>
-                                            <Link href="/contact-us" className='fs-6 fw-medium'>
-                                                Contact us
+                                            <Link href="/contact-us" className='fs-7 fw-medium'>
+                                                {t('navbar.contact')}
                                             </Link>
                                         </li>
                                         <li className='mb-2'>
-                                            <Link href="/privacy-policy" className='fs-6 fw-medium'>
-                                                Privacy Policy
+                                            <Link href="/privacy-policy" className='fs-7 fw-medium'>
+                                                {t('footer.privacy_policy')}
                                             </Link>
                                         </li>
                                     </ul>
@@ -183,25 +233,30 @@ const Footer = () => {
                             <Accordion.Item eventKey="2">
                                 <Accordion.Header>
                                     <h6 className="fs-6 fw-semibold">
-                                        Let's talk!
+                                        {t('footer.lets_talk')}
                                     </h6>
                                 </Accordion.Header>
                                 <Accordion.Body>
                                     <ul className="list-unstyled footer-links">
                                         <li className='mb-2'>
-                                            <a className='email fs-6 fw-medium'
-                                                href='mailto:Info@CCIT.SA' target='_blank'>
-                                                Info@CCIT.SA
+                                            <a className='email fs-7 fw-medium'
+                                                href='mailto:support@CCIT.SA' target='_blank'>
+                                                Support@CCIT.SA
                                             </a>
                                         </li>
 
                                         <li className='mb-2'>
-                                            <a className='email fs-6 fw-medium'
+                                            <a className='email fs-7 fw-medium'
                                                 href='mailto:Sales@CCIT.SA' target='_blank'>
                                                 Sales@CCIT.SA
                                             </a>
                                         </li>
                                     </ul>
+                                    <a href="https://wa.me/message/3R7SF4MG2S7MP1" target="_blank">
+                                        <Image src='/assets/images/whatsapp-img.jpeg' alt='whatsapp' className='mx-auto whatsapp-img'
+                                            width={120} height={50} />
+                                    </a>
+
                                 </Accordion.Body>
                             </Accordion.Item>
                         </Accordion>
@@ -210,20 +265,24 @@ const Footer = () => {
                     {/* Subscribe */}
                     <div class="col-lg-3 my-2">
                         <div class="">
-                            <h5 class="footer-title fs-5 fw-bold mb-4">
-                                Subscribe to our newsletter
+                            <h5 class="footer-title fs-6 fw-bold mb-4">
+                                {t('footer.subscribe_to_our_newsletter')}
                             </h5>
-                            <form class="d-flex">
-                                <input type="email" class="w-100 px-3 py-1" placeholder="Your Email..." />
+                            <form class="d-flex" onSubmit={handleFormSubmit}>
+                                <input type="email" name='email' onChange={(e) => setEmail(e.target.value)} class="w-100 px-3 py-1" placeholder={t('contact.form.place_email')} />
                                 <MainButton type="submit" primary restClasses="black px-4 h-100">
-                                    <img src="/assets/images/send.svg" class="mx-auto" alt="send image" />
+                                    {isSubmitting ? <div className="spinner-border spinner-border-sm my-2 mx-auto text-white" role="status">
+                                        <span className="visually-hidden">Loading...</span>
+                                    </div> : <Image width={17} height={17} src="/assets/images/send.svg" class="mx-auto" alt="send image" />}
+
                                 </MainButton>
                             </form>
+                            {feedback?.msg && <h6 className={`fs-6 fs-responsive mt-2 ${feedback?.valid ? 'cl-primary' : 'text-danger'}`}>{feedback?.msg}</h6>}
                             {/* Social icons */}
                             <ul
                                 class="list-unstyled social my-3 d-flex justify-content-evenly justify-content-lg-between align-items-center ">
                                 <li class="mb-3">
-                                    <a href="intsagram.com" target="_blank" className='d-flex align-items-center justify-content-center rounded-circle'>
+                                    <a href="https://instagram.com/ccit_solutions?igsh=MTZsa2xxZDdqZmV0dg==" target="_blank" className='d-flex align-items-center justify-content-center rounded-circle'>
                                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -239,17 +298,21 @@ const Footer = () => {
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="twitter.com" target="_blank" className='d-flex align-items-center justify-content-center rounded-circle'>
-                                        <svg width="24" height="20" viewBox="0 0 24 20" fill="none"
+                                    <a href="https://twitter.com/ccitsolutions?s=21&t=ZoiOedFzXxVjFrgJaDbZWA" target="_blank" className='d-flex align-items-center justify-content-center rounded-circle'>
+                                        {/* <svg width="24" height="20" viewBox="0 0 24 20" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M7.9607 19.1951C5.28085 19.1951 2.78278 18.4157 0.680176 17.0708C2.46536 17.1863 5.6158 16.9097 7.57537 15.0406C4.62753 14.9053 3.29811 12.6444 3.12471 11.6783C3.37518 11.7749 4.56973 11.8908 5.24407 11.6203C1.8531 10.77 1.33289 7.79422 1.44849 6.88601C2.0843 7.33045 3.16325 7.48504 3.58712 7.44639C0.427345 5.18554 1.56409 1.78459 2.12283 1.0503C4.3904 4.19182 7.78878 5.95622 11.993 6.05436C11.9138 5.7067 11.8719 5.34474 11.8719 4.97298C11.8719 2.30495 14.0284 0.14209 16.6886 0.14209C18.0785 0.14209 19.3309 0.73253 20.2101 1.67697C21.1389 1.45932 22.5367 0.949829 23.2201 0.509237C22.8756 1.74595 21.8033 2.77761 21.1546 3.15999C21.16 3.173 21.1494 3.14692 21.1546 3.15999C21.7244 3.0738 23.2661 2.77751 23.8752 2.3643C23.574 3.05907 22.4371 4.21424 21.5041 4.86096C21.6777 12.5167 15.8203 19.1951 7.9607 19.1951Z"
                                                 fill="#010101" />
-                                        </svg>
+                                        </svg> */}
+
+                                        <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                                            clip-rule="evenodd" viewBox="0 0 512 462.799"><path fill-rule="nonzero"
+                                                d="M403.229 0h78.506L310.219 196.04 512 462.799H354.002L230.261 301.007 88.669 462.799h-78.56l183.455-209.683L0 0h161.999l111.856 147.88L403.229 0zm-27.556 415.805h43.505L138.363 44.527h-46.68l283.99 371.278z" /></svg>
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="linkedin" target="_blank" className='d-flex align-items-center justify-content-center rounded-circle'>
+                                    <a href="https://www.linkedin.com/company/ccit-company/" target="_blank" className='d-flex align-items-center justify-content-center rounded-circle'>
                                         <svg width="24" height="22" viewBox="0 0 24 22" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <path
@@ -263,7 +326,7 @@ const Footer = () => {
                                     </a>
                                 </li>
                                 <li class="mb-3">
-                                    <a href="github" target="_blank" className='d-flex align-items-center justify-content-center rounded-circle'>
+                                    <a href="https://github.com/ccitsa991" target="_blank" className='d-flex align-items-center justify-content-center rounded-circle'>
                                         <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
                                             xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_172_1203)">
@@ -280,36 +343,17 @@ const Footer = () => {
                                         </svg>
                                     </a>
                                 </li>
+
                                 <li class="mb-3">
-                                    <a href="behance" target="_blank" className='d-flex align-items-center justify-content-center rounded-circle'>
-                                        <svg width="28" height="27" viewBox="0 0 28 27" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_172_1205)">
-                                                <path
-                                                    d="M0.703552 5.04053V21.6485H8.75338C9.49734 21.6485 10.2247 21.5549 10.9243 21.3695C11.6317 21.1834 12.2636 20.8966 12.8134 20.5076C13.359 20.1216 13.8016 19.6211 14.1271 19.0036C14.449 18.3938 14.6101 17.6682 14.6101 16.8263C14.6101 15.7877 14.3638 14.9015 13.8592 14.1611C13.3574 13.4252 12.6007 12.908 11.5784 12.6147C12.3292 12.2591 12.8899 11.8017 13.2726 11.2448C13.6519 10.686 13.8416 9.98771 13.8416 9.1515C13.8416 8.37829 13.7149 7.72534 13.462 7.20323C13.2025 6.67346 12.841 6.25238 12.3784 5.9358C11.9086 5.6199 11.3524 5.38939 10.7008 5.25124C10.0452 5.10938 9.32825 5.04064 8.53355 5.04064L0.703552 5.04053ZM18.3294 6.15461V7.7934H25.0618V6.15461H18.3294ZM4.36081 7.86911H7.7816C8.10481 7.86911 8.42094 7.89206 8.72199 7.95135C9.02889 8.00378 9.29349 8.1021 9.52749 8.24329C9.76329 8.37885 9.94981 8.57291 10.0911 8.82064C10.227 9.06848 10.2943 9.38741 10.2943 9.77396C10.2943 10.4702 10.0906 10.9779 9.6698 11.2844C9.24478 11.5966 8.70871 11.7509 8.0606 11.7509H4.36081V7.86911ZM21.8489 9.28256C20.9276 9.28256 20.0954 9.44704 19.3409 9.77306C18.5865 10.0998 17.9388 10.5465 17.3926 11.1135C16.8474 11.6772 16.4324 12.3494 16.1326 13.1283C15.8387 13.9045 15.6891 14.7444 15.6891 15.6438C15.6891 16.5739 15.8336 17.4315 16.1206 18.2072C16.4108 18.986 16.8178 19.6497 17.3419 20.2108C17.8796 20.7696 18.5186 21.199 19.2836 21.5042C20.0493 21.8069 20.9016 21.9596 21.8489 21.9596C23.2079 21.9596 24.3741 21.6479 25.3307 21.023C26.2981 20.4011 27.0072 19.3681 27.4747 17.9209H24.5666C24.4541 18.2929 24.1627 18.651 23.6846 18.9859C23.2014 19.3221 22.6252 19.4913 21.9589 19.4913C21.0326 19.4913 20.3177 19.2474 19.823 18.7643C19.3267 18.2812 19.0055 17.3818 19.0055 16.4308H27.6826C27.7447 15.4981 27.6689 14.6063 27.4526 13.7537C27.2345 12.8985 26.8864 12.1376 26.3959 11.471C25.9059 10.8038 25.2817 10.271 24.5205 9.87746C23.7568 9.47888 22.8664 9.28256 21.8489 9.28256ZM21.7491 11.7767C22.5602 11.7767 23.2258 12.012 23.618 12.4465C24.0121 12.8841 24.3003 13.5076 24.3792 14.3495H19.0055C19.0208 14.1149 19.0707 13.8495 19.1561 13.5569C19.2404 13.2567 19.3855 12.9759 19.5986 12.7098C19.8129 12.4481 20.0938 12.2249 20.4356 12.0465C20.7854 11.8656 21.2215 11.7768 21.7491 11.7768V11.7767ZM4.36093 14.2471H8.336C9.12305 14.2471 9.76273 14.4273 10.2427 14.7911C10.7218 15.1601 10.9632 15.7682 10.9632 16.624C10.9632 17.061 10.8921 17.4221 10.7443 17.7002C10.5969 17.9808 10.3949 18.2026 10.1503 18.3635C9.90594 18.5312 9.61558 18.6445 9.28843 18.7164C8.96645 18.7882 8.62411 18.8199 8.26299 18.8199H4.36081L4.36093 14.2471Z"
-                                                    fill="#010101" />
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_172_1205">
-                                                    <rect width="27" height="27" fill="white"
-                                                        transform="translate(0.703552)" />
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
+                                    <a href="https://www.google.com/maps?q=CCIT+Solutions,+Al+Abbas+Ibn+Abd+Al+Mouttaleb,+At+Taawun,+Riyadh+12476&ftid=0x3e2ee55e2d8a9eb9:0x120f5ad9a1f1ec0&entry=gps&lucs=,94278711,94275300,94224825,94227247,94227248,94231188,47071704,47069508,94273879,94218641,94282134,94203019,47084304&g_ep=CAISEjI1LjI5LjEuNzgyOTg1OTc1MBgAINeCAyp1LDk0Mjc4NzExLDk0Mjc1MzAwLDk0MjI0ODI1LDk0MjI3MjQ3LDk0MjI3MjQ4LDk0MjMxMTg4LDQ3MDcxNzA0LDQ3MDY5NTA4LDk0MjczODc5LDk0MjE4NjQxLDk0MjgyMTM0LDk0MjAzMDE5LDQ3MDg0MzA0QgJTQQ%3D%3D&skid=0775d514-18f4-4e0b-ae66-b43f6823c032&g_st=ic" target="_blank" className='d-flex align-items-center justify-content-center rounded-circle'>
+                                        {/* <svg className="gitlab" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 380"><defs></defs><g id="LOGO"><path d="M282.83,170.73l-.27-.69-26.14-68.22a6.81,6.81,0,0,0-2.69-3.24,7,7,0,0,0-8,.43,7,7,0,0,0-2.32,3.52l-17.65,54H154.29l-17.65-54A6.86,6.86,0,0,0,134.32,99a7,7,0,0,0-8-.43,6.87,6.87,0,0,0-2.69,3.24L97.44,170l-.26.69a48.54,48.54,0,0,0,16.1,56.1l.09.07.24.17,39.82,29.82,19.7,14.91,12,9.06a8.07,8.07,0,0,0,9.76,0l12-9.06,19.7-14.91,40.06-30,.1-.08A48.56,48.56,0,0,0,282.83,170.73Z" /></g></svg> */}
+
+                                        <svg width="28px" height="28px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><defs>
+                                        </defs><path class="a" d="M17.8971,33.398A39.3963,39.3963,0,0,1,20.97,37.9305a22.9991,22.9991,0,0,1,1.6835,4.2849c.3512.9893.6687,1.2846,1.3513,1.2846.7439,0,1.0814-.5023,1.3421-1.2792A23.224,23.224,0,0,1,26.9837,38.02a47.8757,47.8757,0,0,1,4.5556-6.4576A41.3528,41.3528,0,0,0,36.05,25.0614a15.78,15.78,0,0,0,1.5553-6.887,13.5933,13.5933,0,0,0-1.5338-6.3579" /><path class="a" d="M11.7348,24.5783c1.4572,3.3284,4.2673,6.2543,6.1685,8.822L28.0015,21.4384a5.3056,5.3056,0,0,1-4.0034,1.8606,5.1725,5.1725,0,0,1-5.1967-5.19,5.5055,5.5055,0,0,1,1.1941-3.3484" /><path class="a" d="M28.1142,5.1151a13.519,13.519,0,0,1,7.9608,6.6991l-8.0705,9.6173a5.6064,5.6064,0,0,0,1.1941-3.3606A5.2235,5.2235,0,0,0,24.01,12.8964a5.4179,5.4179,0,0,0-4.0111,1.8575" /><path class="a" d="M13.5847,9.3646A13.4781,13.4781,0,0,1,23.972,4.5a13.8562,13.8562,0,0,1,4.1338.6189l-8.1142,9.64" /><path class="a" d="M11.7348,24.5783A15.3756,15.3756,0,0,1,10.3943,18.15a13.5161,13.5161,0,0,1,3.19-8.7852L19.9962,14.76Z" /></svg>
+
                                     </a>
                                 </li>
-                                <li class="mb-3">
-                                    <a href="youtube" target="_blank" className='d-flex align-items-center justify-content-center rounded-circle'>
-                                        <svg class="youtube" width="34" height="34" viewBox="0 0 34 34" fill="none"
-                                            xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M3.02772 10.2939C3.16081 8.24487 4.80819 6.63906 6.85899 6.53746C9.8287 6.39033 14.0733 6.21289 17.2714 6.21289C20.4695 6.21289 24.7141 6.39033 27.6838 6.53746C29.7346 6.63906 31.382 8.24487 31.5151 10.2939C31.6426 12.257 31.7683 14.6725 31.7683 16.5678C31.7683 18.4631 31.6426 20.8786 31.5151 22.8417C31.382 24.8907 29.7346 26.4965 27.6838 26.5981C24.7141 26.7453 20.4695 26.9227 17.2714 26.9227C14.0733 26.9227 9.8287 26.7453 6.85899 26.5981C4.80819 26.4965 3.16081 24.8907 3.02772 22.8417C2.90021 20.8786 2.77454 18.4631 2.77454 16.5678C2.77454 14.6725 2.90021 12.257 3.02772 10.2939Z"
-                                                fill="#010101" />
-                                            <path d="M14.1649 12.4258V20.7097L22.4488 16.5677L14.1649 12.4258Z"
-                                                fill="white" />
-                                        </svg>
-                                    </a>
-                                </li>
+
                             </ul>
                         </div>
                     </div>
@@ -317,8 +361,13 @@ const Footer = () => {
             </div>
             <div className="container">
                 <div className="footer-bottom mt-lg-3 pt-3 pt-md-4 pb-2 pb-md-3">
-                    <p className='my-1 fw-medium text-center'>
-                        Copyright © 2022 CCIT Software Solutions, Based In Riyadh ❤️
+                    <p className='my-1  text-center'>
+                        <Trans
+                            i18nKey="common:footer.copyright"
+                            components={{
+                                0: <span className='fw-medium' />,
+                            }}
+                        />
                     </p>
                 </div>
 

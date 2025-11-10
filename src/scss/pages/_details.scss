@@ -1,0 +1,216 @@
+.details-page {
+    .main-hero {
+        .details {
+            margin-top: 4rem;
+            padding-bottom: 22rem;
+            color: #fff;
+    
+            span {
+                font-size: 20px;
+                color: $gray-color;
+            }
+    
+            h3 {
+                font-size: 40px;
+                line-height: 70px;
+            }
+    
+            .two-btn {
+                button {
+                    color: #fff;
+                    width: 137px;
+                    height: 39px;
+                    border-radius: 27px;
+                    border: 2px solid #fff;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .cart-details {
+        margin-top: -22rem;
+
+        .img-cart {
+            position: relative;
+            height: 40rem;
+
+            img {
+                border-radius: 30px;
+                height: 100%;
+                width: 90%;
+            }
+        }
+
+        .desc-cart {
+            padding-left: 6rem;
+
+            h3 {
+                font-size: 28px;
+                margin: 1.5rem 0;
+            }
+
+            p {
+                font-weight: 400;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 28px;
+                color: $text-light;
+            }
+        }
+    }
+
+    .slid {
+        margin: 3rem 0;
+
+        
+        h2 {
+            font-size: 40px;
+            letter-spacing: -0.04em;
+            color: $text-color;
+            margin-bottom: 2rem;
+        }
+        .slid-container {
+            
+            .slick-list {
+                .slick-track {
+                    display: flex;
+                    gap: 1rem;
+                }
+            }
+            position: relative;
+
+            .slick-prev {
+                top: -3.5rem;
+                left: auto;
+                right: 5rem;
+            }
+            .slick-next {
+                top: -3.5rem;
+                right: 2rem;
+            }
+            [dir="rtl"] & {
+                direction: rtl;
+
+                .slick-prev {
+                    left: 5rem;
+                    right: auto;
+                }
+                .slick-next {
+                    top: -3.5rem;
+                    right: auto;
+                    left: 2rem;
+                }
+            }
+        }
+    }
+}
+
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: "slick";
+    font-size: 35px;
+    line-height: 1;
+    color: $text-color;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// =====================  breakpoint (lg) =================
+@media screen and (max-width: 991px) {
+    .details-page { 
+        .cart-details {
+            .desc-cart {
+                padding-left: 0rem;
+            }
+        }
+    }
+}
+
+// =====================  breakpoint (sm) =================
+@media screen and (max-width: 576px) {
+    .details-page {
+        .main-hero {
+            .details {
+                padding-bottom: 8rem;
+                margin-top: 2rem;
+    
+                span {
+                    font-size: 12px;
+                }
+    
+                h3 {
+                    font-size: 18px;
+                    line-height: 29px;
+                    letter-spacing: -2%;
+                }
+    
+                .two-btn {
+                    button {
+                        width: 66px;
+                        height: 26px;
+                        border-radius: 27px;
+                        font-size: 10px;
+                        border: 1px solid #fff;
+                    }
+                }
+            }
+        }
+        
+            .cart-details {
+                margin-top: -12rem;
+                .img-cart {
+                    height: 18rem;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+        
+                .desc-cart {
+                    padding-left: 0;
+        
+                    h3 {
+                        font-size: 14px;
+                        margin: 1.5rem 0;
+                    }
+        
+                    p {
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 25px;
+                    }
+                }
+            }
+            .slid {
+                margin: 1.5rem 0;
+        
+                h2 {
+                    font-size: 18px;
+                    letter-spacing: -4%;
+                }
+            }
+    }
+.slick-prev:before,
+.slick-next:before {
+    font-size: 20px;
+}
+    .details-page {
+        .slid {
+            .slid-container {
+            .slick-list {
+                .slick-track {
+                    gap: 0;
+                }
+            }
+                .slick-prev,.slick-next {
+                    top: -2.5rem;
+                }
+                .slick-prev {
+                    right: 4.5rem;
+                }
+            }
+        }
+    }
+}

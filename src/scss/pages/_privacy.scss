@@ -1,0 +1,72 @@
+.privacy-page {
+    margin-top: 8rem;
+
+    .title {
+        h1 {
+            font-size: 40px;
+            line-height: 68px;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 23px;
+            letter-spacing: 0.10em;
+            color: rgba(121, 134, 166, 1);
+        }
+    }
+
+    .details {
+        p {
+            font-weight: 400;
+            font-size: 17px;
+            line-height: 30px;
+            letter-spacing: 0em;
+
+            a {
+                color: $primary-color;
+            }
+        }
+
+        h4 {    
+            font-weight: 600;
+            font-size: 18px;
+            letter-spacing: 0em;
+        }
+    }
+
+    hr {
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .privacy-page {
+    .title {
+        h1 {
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+    }
+
+    .details {
+        p {
+            font-size: 12px;
+            line-height: 20px;
+        }
+
+        h4 {    
+            font-size: 14px;
+        }
+    }
+
+    hr {
+        margin-top: 2rem;
+    }
+}
+}
